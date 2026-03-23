@@ -5,6 +5,22 @@
     @include('partials.head')
 </head>
 
+<script>
+    const colores = {
+        1: '#ef4444',
+        2: '#3b82f6',
+        3: '#22c55e',
+        4: '#f97316',
+    };
+
+    function cambiarColor(numero) {
+        console.log('Hello from sidebar!-Cambio de color ' + numero);
+        document.querySelectorAll('.min-h-screen').forEach(function(el) {
+            el.style.backgroundColor = colores[numero];
+        });
+    }
+</script>
+
 <body class="min-h-screen bg-white dark:bg-zinc-800">
     <flux:sidebar sticky collapsible="mobile" class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
         <flux:sidebar.header>
@@ -20,11 +36,17 @@
                 <flux:sidebar.item icon="inbox" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('CorreoMail') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="inbox" href="/correo3" wire:navigate>
+                <flux:sidebar.item icon="inbox" href="{{ route('correo3') }}" wire:navigate>
                     {{ __('Correo 3') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="inbox" href="/correo4" wire:navigate>
+                <flux:sidebar.item icon="inbox" href="{{ route('correo4') }}" wire:navigate>
                     {{ __('Correo 4') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(3); return false;">
+                    {{ __('Cambiar Color y Mensaje 3') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(4); return false;">
+                    {{ __('Cambiar Color y Mensaje 4') }}
                 </flux:sidebar.item>
             </flux:sidebar.group>
         </flux:sidebar.nav>
