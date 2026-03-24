@@ -5,6 +5,7 @@ $estudiantes = [
     ['nombre' => 'Sebas López', 'edad' => 19, 'carrera' => 'Arquitectura'],
 ];
 ?>
+<x-layouts::app :title="__('Dashboard')">
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +13,7 @@ $estudiantes = [
     <meta charset="UTF-8">
     <title>Correo 4</title>
     <style>
-        body {
+        /*body {
             font-family: Arial, sans-serif;
             background: #f3f4f6;
             display: flex;
@@ -20,7 +21,7 @@ $estudiantes = [
             align-items: center;
             min-height: 100vh;
             margin: 0;
-        }
+        }*/
 
         .contenedor {
             text-align: center;
@@ -97,3 +98,4 @@ $estudiantes = [
 </body>
 
 </html>
+</x-layouts::app>

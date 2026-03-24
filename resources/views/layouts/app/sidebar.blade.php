@@ -36,11 +36,23 @@
                 <flux:sidebar.item icon="inbox" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('CorreoMail') }}
                 </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" :href="route('correo1')" :current="request()->routeIs('correo1')" wire:navigate>
+                    {{ __('Correo 1') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" :href="route('correo2')" :current="request()->routeIs('correo2')" wire:navigate>
+                    {{ __('Correo 2') }}
+                </flux:sidebar.item>
                 <flux:sidebar.item icon="inbox" href="{{ route('correo3') }}" wire:navigate>
                     {{ __('Correo 3') }}
                 </flux:sidebar.item>
                 <flux:sidebar.item icon="inbox" href="{{ route('correo4') }}" wire:navigate>
                     {{ __('Correo 4') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" onclick="localStorage.setItem('colorSeleccionado', 1)" wire:navigate>
+                    {{ __('Cambiar Color y Mensaje 1') }}
+                </flux:sidebar.item>
+                <flux:sidebar.item icon="inbox" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" onclick="localStorage.setItem('colorSeleccionado', 2)" wire:navigate>
+                    {{ __('Cambiar Color y Mensaje 2') }}
                 </flux:sidebar.item>
                 <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(3); return false;">
                     {{ __('Cambiar Color y Mensaje 3') }}
