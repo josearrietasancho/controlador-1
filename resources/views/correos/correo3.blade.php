@@ -53,6 +53,20 @@ $estudiantes = [
         tr:hover td {
             background-color: #f0f4ff;
         }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background-color: #1e3a5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn-back:hover {
+            background-color: #2d5080;
+        }
     </style>
 </head>
 
@@ -77,6 +91,7 @@ $estudiantes = [
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <a href="{{ route('dashboard') }}" class="btn-back">← Go Back</a>
     </div>
 </body>
 
