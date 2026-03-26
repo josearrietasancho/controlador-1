@@ -48,10 +48,10 @@
                 <flux:sidebar.item icon="inbox" href="{{ route('correo4') }}" wire:navigate>
                     {{ __('Correo 4') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="inbox" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" onclick="localStorage.setItem('colorSeleccionado', 1)" wire:navigate>
+                <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(1); return false;">
                     {{ __('Cambiar Color y Mensaje 1') }}
                 </flux:sidebar.item>
-                <flux:sidebar.item icon="inbox" href="{{ route('dashboard') }}" :current="request()->routeIs('dashboard')" onclick="localStorage.setItem('colorSeleccionado', 2)" wire:navigate>
+                <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(2); return false;">
                     {{ __('Cambiar Color y Mensaje 2') }}
                 </flux:sidebar.item>
                 <flux:sidebar.item icon="inbox" href="#" onclick="cambiarColor(3); return false;">

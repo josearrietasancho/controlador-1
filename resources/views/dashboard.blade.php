@@ -1,21 +1,3 @@
-<script>
-
-    function aplicarColorGuardado() {
-        const numero = localStorage.getItem('colorSeleccionado');
-
-        if (numero && colores[numero]) {
-            document.querySelectorAll('.min-h-screen').forEach(function(el) {
-                el.style.backgroundColor = colores[numero];
-            });
-
-            console.log('Hello from sidebar!-Cambio de color ' + numero);
-        }
-        localStorage.removeItem('colorSeleccionado');
-    }
-
-    document.addEventListener('DOMContentLoaded', aplicarColorGuardado);
-    document.addEventListener('livewire:navigated', aplicarColorGuardado);
-</script>
 <x-layouts::app :title="__('Dashboard')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
         <div class="grid auto-rows-min gap-4 md:grid-cols-3">
