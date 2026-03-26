@@ -6,8 +6,8 @@ Route::view('/', 'welcome')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
-    Route::view('correo1', 'correo1')->name('correo1');
-    Route::view('correo2', 'correo2')->name('correo2');
+    Route::view('correo1', 'correos.correo1')->name('correo1');
+    Route::view('correo2', 'correos.correo2')->name('correo2');
     Route::view('correo3', 'correos.correo3')->name('correo3');
     Route::view('correo4', 'correos.correo4')->name('correo4');
 });
